@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "主页";
+}
+
+@section head{
+    <script type="text/javascript">
+        $(function hello () {
+            alert("hello suyongquan !!");
+        })
+    </script>
+}
+
+<p>执行普通C#语法</p><br />
+@DateTime.Now.Date.ToShortDateString()
+
+<input type="button" onclick="hello()" value="显示消息框" />
+
+<p>执行C#语段</p><br />
+@{
+    List<string> list = new List<string> { "MVC3","Razor"};
+    list.Add(".net4");
+ }
+
+ <ul>
+ @foreach(string s in list)
+ {
+     if (string.IsNullOrEmpty(s))
+     {
+         <li>空</li> 
+     }
+     else
+     {
+         <li>@s</li> 
+     }
+ }
+
+ </ul>
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <button>见习操盘手</button>
+                <button>签约操盘手</button>
+            </hgroup>
+        </div>
+    </section>
+}
+
+
+
